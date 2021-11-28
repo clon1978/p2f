@@ -5,7 +5,7 @@ from time import time
 from lumibot.backtesting import YahooDataBacktesting
 from lumibot.tools import indicators
 
-from sell_if_down import SellIfDown
+from expansion_breakout import ExpansionBreakout
 
 # Choose your budget and log file locations
 budget = 40000
@@ -28,18 +28,18 @@ for x in range(10):
     print(f"Backtesting with buy_after_days = {buy_after_days}")
 
     # Select our strategy
-    strategy_name = "sell_if_down"
+    strategy_name = "expansion_breakout"
 
     # Run the actual backtest
-    stats = SellIfDown.backtest(
+    stats = ExpansionBreakout.backtest(
         strategy_name,
         budget,
         YahooDataBacktesting,
         backtesting_start,
         backtesting_end,
         buy_after_days=buy_after_days,
-        buy_symbol="AAPL",
-        change_threshold=-0.04,
+        buy_symbol="INTC",
+        change_threshold=-0.01,
     )
     result = stats.get(strategy_name)
 
@@ -66,7 +66,7 @@ logfile = "logs/test.log"
 trader = Trader(logfile=logfile)
 broker = Alpaca(AlpacaConfig)
 
-strategy = SellIfDown(
+strategy = ExpansionBreakout(
     name=strategy_name,
     budget=budget,
     broker=broker,

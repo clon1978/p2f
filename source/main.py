@@ -77,7 +77,7 @@ logfile = "logs/output.log"
 trader = Trader(logfile=logfile)
 broker = Alpaca(AlpacaConfig)
 
-strategy = SellIfDown(
+strategy = ExpansionBreakout(
     name=strategy_name,
     budget=budget,
     broker=broker,
