@@ -1,0 +1,30 @@
+2021-12-25 17:59:47,158: INFO: Strategy HitAndRun: Executing the initialize lifecycle method
+2021-12-25 17:59:47,159: INFO: Current backtesting datetime 2020-12-28 00:00:00-05:00
+2021-12-25 17:59:47,159: INFO: Strategy HitAndRun: Executing the on_trading_iteration lifecycle method
+2021-12-25 17:59:47,165: ERROR: name 'before_market_opens' is not defined
+2021-12-25 17:59:47,175: ERROR: Traceback (most recent call last):
+  File "C:\Users\claudioa\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\lumibot\strategies\strategy_executor.py", line 476, in run
+    self._run_trading_session()
+  File "C:\Users\claudioa\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\lumibot\strategies\strategy_executor.py", line 409, in _run_trading_session
+    self._on_trading_iteration()
+  File "C:\Users\claudioa\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\lumibot\strategies\strategy_executor.py", line 234, in func_output
+    result = func_input(self, *args, **kwargs)
+  File "C:\Users\claudioa\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\lumibot\strategies\strategy_executor.py", line 258, in func_output
+    result = func_input(self, *args, **kwargs)
+  File "C:\Users\claudioa\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\lumibot\strategies\strategy_executor.py", line 66, in func_output
+    return func_input(self, *args, **kwargs)
+  File "C:\Users\claudioa\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\lumibot\strategies\strategy_executor.py", line 307, in _on_trading_iteration
+    on_trading_iteration()
+  File "C:\Users\claudioa\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\lumibot\tools\decorators.py", line 57, in func_output
+    frame, result = call_function_get_frame(func_input, *args, **kwargs)
+  File "C:\Users\claudioa\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\lumibot\tools\decorators.py", line 28, in call_function_get_frame
+    result = func(*args, **kwargs)
+  File "c:\Trading\p2f\source\hit_and_run.py", line 40, in on_trading_iteration
+    before_market_opens(self)
+NameError: name 'before_market_opens' is not defined
+
+2021-12-25 17:59:47,182: INFO: Strategy HitAndRun: Executing the on_bot_crash event method
+2021-12-25 17:59:47,182: INFO: Strategy HitAndRun: name 'before_market_opens' is not defined
+2021-12-25 17:59:47,182: WARNING: Strategy HitAndRun: sell all
+2021-12-25 17:59:47,183: INFO: Backtest took 0:00:00.030005 for a speed of 0.000
+2021-12-25 17:59:47,183: WARNING: Cannot plot returns because the strategy returns are missing

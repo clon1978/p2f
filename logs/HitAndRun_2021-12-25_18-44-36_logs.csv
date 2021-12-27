@@ -1,0 +1,28 @@
+2021-12-25 18:44:39,078: INFO: Strategy HitAndRun: Executing the initialize lifecycle method
+2021-12-25 18:44:39,082: INFO: Current backtesting datetime 2020-12-28 08:30:00-05:00
+2021-12-25 18:44:39,083: INFO: Strategy HitAndRun: Executing the before_market_opens lifecycle method
+2021-12-25 18:44:39,086: INFO: Current backtesting datetime 2020-12-28 09:30:00-05:00
+2021-12-25 18:44:39,086: INFO: Strategy HitAndRun: Executing the before_starting_trading lifecycle method
+2021-12-25 18:44:45,553: ERROR: 0
+2021-12-25 18:44:45,563: ERROR: Traceback (most recent call last):
+  File "C:\Users\claudioa\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\lumibot\strategies\strategy_executor.py", line 476, in run
+    self._run_trading_session()
+  File "C:\Users\claudioa\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\lumibot\strategies\strategy_executor.py", line 422, in _run_trading_session
+    self._before_starting_trading()
+  File "C:\Users\claudioa\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\lumibot\strategies\strategy_executor.py", line 234, in func_output
+    result = func_input(self, *args, **kwargs)
+  File "C:\Users\claudioa\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\lumibot\strategies\strategy_executor.py", line 298, in _before_starting_trading
+    self.strategy.before_starting_trading()
+  File "c:\Trading\p2f\source\hit_and_run.py", line 81, in before_starting_trading
+    df = self.bars[0].df
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2544.0_x64__qbz5n2kfra8p0\lib\collections\__init__.py", line 1057, in __getitem__
+    return self.__class__.__missing__(self, key)
+  File "C:\Users\claudioa\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\lumibot\entities\asset.py", line 143, in __missing__
+    raise KeyError(key)
+KeyError: 0
+
+2021-12-25 18:44:45,570: INFO: Strategy HitAndRun: Executing the on_bot_crash event method
+2021-12-25 18:44:45,570: INFO: Strategy HitAndRun: 0
+2021-12-25 18:44:45,570: WARNING: Strategy HitAndRun: sell all
+2021-12-25 18:44:45,571: INFO: Backtest took 0:00:06.506063 for a speed of 0.000
+2021-12-25 18:44:45,571: WARNING: Cannot plot returns because the strategy returns are missing

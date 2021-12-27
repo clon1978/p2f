@@ -1,0 +1,22 @@
+2021-12-25 19:14:37,436: INFO: Strategy HitAndRun: Executing the initialize lifecycle method
+2021-12-25 19:14:37,439: INFO: Current backtesting datetime 2020-12-28 08:30:00-05:00
+2021-12-25 19:14:37,442: INFO: Strategy HitAndRun: Executing the before_market_opens lifecycle method
+2021-12-25 19:14:37,446: INFO: Current backtesting datetime 2020-12-28 09:30:00-05:00
+2021-12-25 19:14:37,446: INFO: Strategy HitAndRun: Executing the before_starting_trading lifecycle method
+2021-12-25 19:15:17,329: ERROR: unsupported operand type(s) for -: 'list' and 'list'
+2021-12-25 19:15:17,340: ERROR: Traceback (most recent call last):
+  File "C:\Users\claudioa\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\lumibot\strategies\strategy_executor.py", line 476, in run
+    self._run_trading_session()
+  File "C:\Users\claudioa\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\lumibot\strategies\strategy_executor.py", line 422, in _run_trading_session
+    self._before_starting_trading()
+  File "C:\Users\claudioa\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\lumibot\strategies\strategy_executor.py", line 234, in func_output
+    result = func_input(self, *args, **kwargs)
+  File "C:\Users\claudioa\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\lumibot\strategies\strategy_executor.py", line 298, in _before_starting_trading
+    self.strategy.before_starting_trading()
+  File "c:\Trading\p2f\source\hit_and_run.py", line 84, in before_starting_trading
+    expansion_breakout(self.bars, self.tickers)
+  File "c:\Trading\p2f\source\hr_triggers.py", line 24, in expansion_breakout
+    nine_day_range = bars[ticker].df["high"].iloc[-9:].to_list() - bars[ticker].df["low"].iloc[-9:].to_list()
+TypeError: unsupported operand type(s) for -: 'list' and 'list'
+
+2021-12-25 19:15:17,345: INFO: Strategy HitAndRun: Executing the on_bot_crash event method
