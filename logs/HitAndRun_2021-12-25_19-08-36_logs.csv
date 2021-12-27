@@ -1,5 +1,0 @@
-2021-12-25 19:08:38,810: INFO: Strategy HitAndRun: Executing the initialize lifecycle method
-2021-12-25 19:08:38,814: INFO: Current backtesting datetime 2020-12-28 08:30:00-05:00
-2021-12-25 19:08:38,815: INFO: Strategy HitAndRun: Executing the before_market_opens lifecycle method
-2021-12-25 19:08:38,818: INFO: Current backtesting datetime 2020-12-28 09:30:00-05:00
-2021-12-25 19:08:38,819: INFO: Strategy HitAndRun: Executing the before_starting_trading lifecycle method
